@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aplicaciones de las Matemáticas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg: #121212;
+      --card: #1e1e1e;
+      --primary: #ffffff;
+      --accent: #558de8;
+      --muted: #aaaaaa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #111, #1f1f1f);
+      padding: 2.5rem 1rem;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      background: var(--card);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #9bbfff;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeUp 0.8s ease-out;
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.8rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+    }
+
+    .btn {
+      background-color: var(--accent);
+      color: var(--bg);
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 2rem;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #74aaff;
+    }
+
+    .section-hidden {
+      display: none;
+    }
+
+    .section-visible {
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #000;
+      color: #777;
+      padding: 1.5rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+
+    img.responsive-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Aplicaciones de las Matemáticas</h1>
+  <p>Explora cómo las usamos en la vida real y en tu futuro profesional</p>
+</header>
+
+<nav>
+  <a href="#" onclick="showSection('intro')"><i class="fas fa-lightbulb"></i> Introducción</a>
+  <a href="#" onclick="showSection('diaria')"><i class="fas fa-home"></i> Vida diaria</a>
+  <a href="#" onclick="showSection('carreras')"><i class="fas fa-briefcase"></i> Carreras</a>
+  <a href="#" onclick="showSection('testimonio')"><i class="fas fa-user"></i> Testimonio</a>
+  <a href="#" onclick="showSection('interactivo')"><i class="fas fa-rocket"></i> Interactivo</a>
+</nav>
+
+<section id="home" class="card section-visible">
+  <h2>Bienvenido</h2>
+  <p>Haz clic en el menú superior para descubrir cómo las matemáticas están presentes en tu día a día, en los trabajos del futuro y en tus decisiones personales. ¡Empieza tu recorrido!</p>
+</section>
+
+<section id="intro" class="card section-hidden">
+  <h2>Introducción</h2>
+  <div class="grid">
+    <div>
+      <p>¿Para qué sirven las matemáticas? Muchos piensan que solo se usan en el colegio, pero lo cierto es que están en todas partes: en redes sociales, videojuegos, apps, y más.<br>
+      <br>
+    </p>
+      <p>Este sitio muestra su aplicación en la vida y cómo pueden guiarte a elegir una carrera. Si te gustan los números, la lógica o resolver problemas, este sitio es para ti.</p>
+      <p style="margin-top:1.2rem">Responde un test, conoce ejemplos reales y explora herramientas para tu futuro.</p>
+    </div>
+    <div>
+      <img src="imagenes/intro1.jpg" alt="Matemáticas y tecnología" class="responsive-img"/>
+    </div>
+  </div>
+  <button class="btn" onclick="goHome()">Volver al inicio</button>
+</section>
+
+<section id="diaria" class="card section-hidden">
+  <h2>Aplicaciones en la vida diaria</h2>
+  <div class="grid">
+    <div>
+      <p>Las matemáticas están presentes en tareas cotidianas: calcular descuentos, presupuestar gastos, planificar viajes o entender estadísticas en las noticias. Por ejemplo, al cocinar se aplican proporciones, al usar un GPS intervienen algoritmos matemáticos y al ahorrar, se usan nociones de interés y porcentajes. <br>
+      <br>
+    </p>
+      <p>También están en los algoritmos que personalizan tu contenido en redes sociales, como señala la profesora Hannah Fry, especialista en matemáticas aplicadas.</p>
+    </div>
+    <div>
+      <img src="imagenes/vida_diaria.jpg" alt="Uso diario de matemáticas" class="responsive-img"/>
+    </div>
+  </div>
+  <button class="btn" onclick="goHome()">Volver al inicio</button>
+</section>
+
+<section id="carreras" class="card section-hidden">
+  <h2>Aplicaciones en carreras</h2>
+  <div class="grid">
+    <div>
+      <p>En ingeniería se usan ecuaciones diferenciales, en economía se modelan sistemas con funciones, y en medicina se aplica estadística para interpretar estudios clínicos. Según un estudio de The Mathematical Association of America, las carreras STEM (Ciencia, Tecnología, Ingeniería y Matemáticas) tienen gran proyección y requieren pensamiento lógico y cuantitativo.<br>
+      <br>
+    </p>
+      <p>Además, la UNESCO destaca que los datos y la inteligencia artificial, que se basan en modelos matemáticos, transformarán empleos futuros.</p>
+    </div>
+    <div>
+      <img src="imagenes/carreras.jpg" alt="Carreras relacionadas con matemáticas" class="responsive-img"/>
+    </div>
+  </div>
+  <button class="btn" onclick="goHome()">Volver al inicio</button>
+</section>
+
+<section id="testimonio" class="card section-hidden">
+  <h2>Testimonio</h2>
+  <div class="grid">
+    <div>
+      <p>"Siempre pensé que las matemáticas no eran para mí, pero al estudiar arquitectura descubrí que eran esenciales para calcular estructuras y optimizar espacios. Ahora disfruto aplicarlas cada día", cuenta Camila Vargas, estudiante de arquitectura de la Universidad de Chile.<br>
+      <br>
+    </p>
+      <p>También, Felipe Guzmán, ingeniero en datos de una empresa tecnológica, señala: "Gracias a las matemáticas pude comprender el mundo de los algoritmos y los modelos predictivos. Hoy trabajo desarrollando soluciones basadas en inteligencia artificial."</p>
+    </div>
+    <div>
+      <img src="imagenes/testimonio.jpg" alt="Personas que usan matemáticas" class="responsive-img"/>
+    </div>
+  </div>
+  <button class="btn" onclick="goHome()">Volver al inicio</button>
+</section>
+
+<section id="interactivo" class="card section-hidden">
+  <h2>Sección Interactiva</h2>
+  <p>Responde el siguiente test para saber qué tan presentes están las matemáticas en tu vida. Luego, recibirás una pequeña orientación vocacional.</p>
+  <p><em>Próximamente se habilitará el test interactivo</em>.</p>
+  <button class="btn" onclick="goHome()">Volver al inicio</button>
+</section>
+
+<section class="card" style="margin: 2rem auto;">
+  <h2>Bibliografía</h2>
+  <ul style="color: var(--muted); font-size: 0.9rem;">
+    <li>Fry, H. (2018). *Hello World: Being Human in the Age of Algorithms*. W. W. Norton & Company.</li>
+    <li>Mathematical Association of America. (2020). *Careers in Mathematics*. https://www.maa.org/careers</li>
+    <li>UNESCO. (2021). *Artificial Intelligence and the Futures of Learning*. https://unesdoc.unesco.org/ark:/48223/pf0000377074</li>
+    <li>Testimonios personales de Camila Vargas y Felipe Guzmán, recopilados en entrevista directa (julio 2025).</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 Roberto Manríquez — Proyecto Personal</p>
+</footer>
+
+<script>
+  function showSection(id) {
+    const sections = ['home', 'intro', 'diaria', 'carreras', 'testimonio', 'interactivo'];
+    sections.forEach(sec => {
+      document.getElementById(sec).className = 'card section-hidden';
+    });
+    document.getElementById(id).className = 'card section-visible';
+  }
+
+  function goHome() {
+    showSection('home');
+  }
+</script>
+
+</body>
+</html>
