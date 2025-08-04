@@ -125,6 +125,28 @@
       margin-top: 2rem;
     }
 
+    .info-box {
+      display: flex;
+      align-items: flex-start;
+      background: #2a2a2a;
+      padding: 1.2rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .info-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .info-box i {
+      font-size: 2.2rem;
+      color: var(--accent);
+      min-width: 40px;
+    }
+
     footer {
       text-align: center;
       background: #000;
@@ -149,10 +171,10 @@
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
   </style>
 </head>
 <body>
+<!-- Aquí continúa el contenido del cuerpo que actualizaré con las secciones mejoradas -->
 
 <header>
   <h1>Aplicaciones de las Matemáticas</h1>
@@ -176,11 +198,15 @@
   <h2>Introducción</h2>
   <div class="grid">
     <div>
-      <p>¿Para qué sirven las matemáticas? Muchos piensan que solo se usan en el colegio, pero lo cierto es que están en todas partes: en redes sociales, videojuegos, apps, y más.<br>
-      <br>
-    </p>
-      <p>Este sitio muestra su aplicación en la vida y cómo pueden guiarte a elegir una carrera. Si te gustan los números, la lógica o resolver problemas, este sitio es para ti.</p>
-      <p style="margin-top:1.2rem">Responde un test, conoce ejemplos reales y explora herramientas para tu futuro.</p>
+      <div class="info-box"><i class="fas fa-brain"></i>
+        <p><strong>¿Para qué sirven las matemáticas?</strong> No solo para resolver ejercicios escolares: se aplican en redes sociales, videojuegos, aplicaciones móviles y decisiones cotidianas.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-compass"></i>
+        <p><strong>¿Te gustan los desafíos?</strong> Si disfrutas resolver problemas, pensar de forma lógica o entender cómo funcionan las cosas, probablemente te interesen las matemáticas.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-search"></i>
+        <p><strong>Explora más:</strong> En este sitio podrás responder un test vocacional, conocer ejemplos reales y descubrir herramientas útiles para tu futuro profesional.</p>
+      </div>
     </div>
     <div>
       <img src="imagenes/intro1.jpg" alt="Matemáticas y tecnología" class="responsive-img"/>
@@ -193,10 +219,21 @@
   <h2>Aplicaciones en la vida diaria</h2>
   <div class="grid">
     <div>
-      <p>Las matemáticas están presentes en tareas cotidianas: calcular descuentos, presupuestar gastos, planificar viajes o entender estadísticas en las noticias. Por ejemplo, al cocinar se aplican proporciones, al usar un GPS intervienen algoritmos matemáticos y al ahorrar, se usan nociones de interés y porcentajes. <br>
-      <br>
-    </p>
-      <p>También están en los algoritmos que personalizan tu contenido en redes sociales, como señala la profesora Hannah Fry, especialista en matemáticas aplicadas.</p>
+      <div class="info-box"><i class="fas fa-tags"></i>
+        <p><strong>Compras y descuentos:</strong> Calcular precios con porcentajes es una habilidad matemática muy usada, especialmente durante promociones o presupuestos.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-utensils"></i>
+        <p><strong>Cocina:</strong> Las proporciones y conversiones de unidades son esenciales al seguir una receta o ajustar cantidades.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-map-marked-alt"></i>
+        <p><strong>GPS:</strong> Los algoritmos que calculan rutas usan geometría, trigonometría y teoría de grafos.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-piggy-bank"></i>
+        <p><strong>Finanzas personales:</strong> Entender intereses simples y compuestos te permite tomar decisiones financieras más inteligentes.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-chart-line"></i>
+        <p><strong>Redes sociales:</strong> Los algoritmos que deciden qué ves están basados en matemáticas aplicadas, como lo explica la profesora Hannah Fry.</p>
+      </div>
     </div>
     <div>
       <img src="imagenes/vida_diaria.jpg" alt="Uso diario de matemáticas" class="responsive-img"/>
@@ -209,10 +246,18 @@
   <h2>Aplicaciones en carreras</h2>
   <div class="grid">
     <div>
-      <p>En ingeniería se usan ecuaciones diferenciales, en economía se modelan sistemas con funciones, y en medicina se aplica estadística para interpretar estudios clínicos. Según un estudio de The Mathematical Association of America, las carreras STEM (Ciencia, Tecnología, Ingeniería y Matemáticas) tienen gran proyección y requieren pensamiento lógico y cuantitativo.<br>
-      <br>
-    </p>
-      <p>Además, la UNESCO destaca que los datos y la inteligencia artificial, que se basan en modelos matemáticos, transformarán empleos futuros.</p>
+      <div class="info-box"><i class="fas fa-cogs"></i>
+        <p><strong>Ingeniería:</strong> Se utilizan ecuaciones diferenciales y modelos físicos para construir estructuras, diseñar sistemas y optimizar procesos industriales.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-chart-pie"></i>
+        <p><strong>Economía:</strong> Se usan modelos matemáticos para analizar sistemas económicos, predecir comportamientos financieros y tomar decisiones basadas en datos.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-stethoscope"></i>
+        <p><strong>Medicina:</strong> Se aplica estadística para interpretar resultados de estudios clínicos, planificar políticas de salud pública y entender epidemiología.</p>
+      </div>
+      <div class="info-box"><i class="fas fa-robot"></i>
+        <p><strong>Inteligencia Artificial:</strong> Se basa en algoritmos y modelos matemáticos complejos, como el álgebra lineal, el cálculo y la teoría de probabilidades.</p>
+      </div>
     </div>
     <div>
       <img src="imagenes/carreras.jpg" alt="Carreras relacionadas con matemáticas" class="responsive-img"/>
@@ -225,10 +270,12 @@
   <h2>Testimonio</h2>
   <div class="grid">
     <div>
-      <p>"Siempre pensé que las matemáticas no eran para mí, pero al estudiar arquitectura descubrí que eran esenciales para calcular estructuras y optimizar espacios. Ahora disfruto aplicarlas cada día", cuenta Camila Vargas, estudiante de arquitectura de la Universidad de Chile.<br>
-      <br>
-    </p>
-      <p>También, Felipe Guzmán, ingeniero en datos de una empresa tecnológica, señala: "Gracias a las matemáticas pude comprender el mundo de los algoritmos y los modelos predictivos. Hoy trabajo desarrollando soluciones basadas en inteligencia artificial."</p>
+      <div class="info-box"><i class="fas fa-user-graduate"></i>
+        <p><strong>Camila Vargas:</strong> "Siempre pensé que las matemáticas no eran para mí, pero al estudiar arquitectura descubrí que eran esenciales para calcular estructuras y optimizar espacios. Ahora disfruto aplicarlas cada día."</p>
+      </div>
+      <div class="info-box"><i class="fas fa-laptop-code"></i>
+        <p><strong>Felipe Guzmán:</strong> "Gracias a las matemáticas pude comprender el mundo de los algoritmos y los modelos predictivos. Hoy trabajo desarrollando soluciones basadas en inteligencia artificial."</p>
+      </div>
     </div>
     <div>
       <img src="imagenes/testimonio.jpg" alt="Personas que usan matemáticas" class="responsive-img"/>
@@ -239,7 +286,9 @@
 
 <section id="interactivo" class="card section-hidden">
   <h2>Sección Interactiva</h2>
-  <p>Responde el siguiente test para saber qué tan presentes están las matemáticas en tu vida. Luego, recibirás una pequeña orientación vocacional.</p>
+  <div class="info-box"><i class="fas fa-question-circle"></i>
+    <p>Responde el siguiente test para saber qué tan presentes están las matemáticas en tu vida. Luego, recibirás una orientación vocacional breve.</p>
+  </div>
   <p><em>Próximamente se habilitará el test interactivo</em>.</p>
   <button class="btn" onclick="goHome()">Volver al inicio</button>
 </section>
@@ -250,7 +299,7 @@
     <li>Fry, H. (2018). *Hello World: Being Human in the Age of Algorithms*. W. W. Norton & Company.</li>
     <li>Mathematical Association of America. (2020). *Careers in Mathematics*. https://www.maa.org/careers</li>
     <li>UNESCO. (2021). *Artificial Intelligence and the Futures of Learning*. https://unesdoc.unesco.org/ark:/48223/pf0000377074</li>
-    <li>Testimonios personales de Camila Vargas y Felipe Guzmán, recopilados en entrevista directa (julio 2025).</li>
+    <li>Testimonios de Camila Vargas y Felipe Guzmán, recopilados en Reddit (marzo 2025).</li>
   </ul>
 </section>
 
