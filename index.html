@@ -285,12 +285,82 @@
 </section>
 
 <section id="interactivo" class="card section-hidden">
-  <h2>Sección Interactiva</h2>
+  <h2>Test Vocacional (orientativo)</h2>
   <div class="info-box"><i class="fas fa-question-circle"></i>
-    <p>Responde el siguiente test para saber qué tan presentes están las matemáticas en tu vida. Luego, recibirás una orientación vocacional breve.</p>
+    <p>Este test busca orientarte sobre posibles áreas profesionales según tus intereses. No reemplaza la orientación vocacional profesional.</p>
   </div>
-  <p><em>Próximamente se habilitará el test interactivo</em>.</p>
+  <form id="vocacionalForm" style="margin-top: 2rem;">
+    <p><strong>1. ¿Qué actividad disfrutas más? <br>
+    <br>
+  </strong></p>
+    <label><input type="radio" name="p1" value="1"> Resolver acertijos o problemas matemáticos</label><br>
+    <label><input type="radio" name="p1" value="2"> Diseñar, dibujar o crear cosas</label><br>
+    <label><input type="radio" name="p1" value="3"> Cuidar personas o ayudar a otros</label><br>
+    <label><input type="radio" name="p1" value="4"> Investigar sobre la naturaleza y el universo</label><br>
+
+    <p><strong><br>
+      2. ¿Qué prefieres hacer en un proyecto grupal?<br>
+    <br>
+  </strong></p>
+    <label><input type="radio" name="p2" value="1"> Encargarme de los cálculos o análisis</label><br>
+    <label><input type="radio" name="p2" value="2"> Presentar o comunicar la idea</label><br>
+    <label><input type="radio" name="p2" value="3"> Organizar al equipo</label><br>
+    <label><input type="radio" name="p2" value="4"> Buscar información y fuentes confiables</label><br>
+
+    <p><strong><br>
+      3. ¿Qué asignatura disfrutas más?<br>
+    <br>
+  </strong></p>
+    <label><input type="radio" name="p3" value="1"> Matemáticas o Física</label><br>
+    <label><input type="radio" name="p3" value="2"> Arte o Tecnología</label><br>
+    <label><input type="radio" name="p3" value="3"> Biología o Historia</label><br>
+    <label><input type="radio" name="p3" value="4"> Ciencias o Filosofía</label><br>
+
+    <p><strong><br>
+      4. ¿Cómo te gustaría ayudar al mundo?<br>
+    <br>
+  </strong></p>
+    <label><input type="radio" name="p4" value="1"> Creando soluciones tecnológicas</label><br>
+    <label><input type="radio" name="p4" value="2"> Expresando ideas o emociones</label><br>
+    <label><input type="radio" name="p4" value="3"> Mejorando la vida de las personas</label><br>
+    <label><input type="radio" name="p4" value="4"> Entendiendo mejor el planeta o el universo</label><br>
+
+    <p><strong><br>
+      5. ¿Qué frase te representa más?<br>
+    <br>
+  </strong></p>
+    <label><input type="radio" name="p5" value="1"> “Todo tiene una lógica”</label><br>
+    <label><input type="radio" name="p5" value="2"> “Mi imaginación no tiene límites”</label><br>
+    <label><input type="radio" name="p5" value="3"> “Quiero ayudar a otros”</label><br>
+    <label><input type="radio" name="p5" value="4"> “El conocimiento es poder”</label><br>
+
+    <p><strong><br>
+      6. ¿Cómo prefieres trabajar?<br>
+    <br>
+  </strong></p>
+    <label><input type="radio" name="p6" value="1"> Con números, códigos o fórmulas</label><br>
+    <label><input type="radio" name="p6" value="2"> Con herramientas visuales o creativas</label><br>
+    <label><input type="radio" name="p6" value="3"> Con personas directamente</label><br>
+    <label><input type="radio" name="p6" value="4"> En un laboratorio o campo investigativo</label><br>
+
+    <p><strong><br>
+      7. ¿Qué actividad elegirías en tu tiempo libre?<br>
+    <br>
+  </strong></p>
+    <label><input type="radio" name="p7" value="1"> Programar, resolver sudokus o leer sobre ciencia</label><br>
+    <label><input type="radio" name="p7" value="2"> Pintar, grabar videos o editar fotos</label><br>
+    <label><input type="radio" name="p7" value="3"> Voluntariado o ayudar a alguien</label><br>
+    <label><input type="radio" name="p7" value="4"> Leer libros de ciencia o explorar la naturaleza</label><br>
+
+    <button type="button" class="btn" onclick="calcularResultado()">Ver resultado</button>
+  </form>
+
+  <div id="resultadoTest" style="margin-top: 2rem;"></div>
   <button class="btn" onclick="goHome()">Volver al inicio</button>
+
+  <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--muted);">
+    Este test es orientativo y no reemplaza evaluaciones psicológicas o vocacionales profesionales. Las sugerencias se basan en intereses comunes según fuentes como la OECD (2020) y Holland (RIASEC) (1997).
+  </p>
 </section>
 
 <section class="card" style="margin: 2rem auto;">
@@ -300,7 +370,25 @@
     <li>Mathematical Association of America. (2020). *Careers in Mathematics*. https://www.maa.org/careers</li>
     <li>UNESCO. (2021). *Artificial Intelligence and the Futures of Learning*. https://unesdoc.unesco.org/ark:/48223/pf0000377074</li>
     <li>Testimonios de Camila Vargas y Felipe Guzmán, recopilados en Reddit (marzo 2025).</li>
+    <li>OECD. (2020). *Career Readiness: A Systematic Literature Review and Future Research Agenda*. https://www.oecd.org/education/career-readiness.htm</li>
+    <li>Holland, J. L. (1997). *Making Vocational Choices: A Theory of Vocational Personalities and Work Environments* (3rd ed.). Psychological Assessment Resources.</li>
   </ul>
+</section>
+
+<section class="card" style="margin: 2rem auto;">
+  <h2>Comentarios</h2>
+  <p>¿Qué te pareció este sitio? ¿Qué agregarías o cambiarías?</p>
+  <form action="https://formspree.io/f/meozldwe" method="POST" style="margin-top: 1.5rem;">
+    <label for="nombre">Nombre:</label><br/>
+    <input type="text" id="nombre" name="nombre" required
+      style="width: 100%; padding: 0.5rem; margin-top: 0.3rem; border-radius: 8px; border: none; margin-bottom: 1rem;"><br/>
+    
+    <label for="comentario">Comentario:</label><br/>
+    <textarea id="comentario" name="comentario" rows="5" required
+      style="width: 100%; padding: 0.5rem; margin-top: 0.3rem; border-radius: 8px; border: none;"></textarea><br/>
+
+    <button type="submit" class="btn">Enviar comentario</button>
+  </form>
 </section>
 
 <footer>
@@ -318,6 +406,47 @@
 
   function goHome() {
     showSection('home');
+  }
+</script>
+
+<script>
+  function calcularResultado() {
+    const respuestas = Array.from(document.querySelectorAll('#vocacionalForm input[type="radio"]:checked'));
+    if (respuestas.length < 7) {
+      alert("Responde todas las preguntas para obtener un resultado.");
+      return;
+    }
+
+    let puntajes = [0, 0, 0, 0]; // [Lógico, Creativo, Social, Investigador]
+    respuestas.forEach(r => {
+      puntajes[parseInt(r.value) - 1]++;
+    });
+
+    const max = Math.max(...puntajes);
+    const index = puntajes.indexOf(max);
+
+    let mensaje = '';
+    switch(index) {
+      case 0:
+        mensaje = `<strong>Perfil Lógico-Matemático:</strong> podrías explorar carreras como Ingeniería, Estadística, Ciencias de Datos, Matemática Aplicada, o Economía.`;
+        break;
+      case 1:
+        mensaje = `<strong>Perfil Creativo:</strong> podrías considerar Diseño Gráfico, Arquitectura, Producción Audiovisual, Publicidad o Artes Visuales.`;
+        break;
+      case 2:
+        mensaje = `<strong>Perfil Social-Humano:</strong> podrías sentir afinidad con Psicología, Educación, Trabajo Social, Enfermería o Terapia Ocupacional.`;
+        break;
+      case 3:
+        mensaje = `<strong>Perfil Científico-Investigador:</strong> podrías interesarte por Biología, Física, Medicina, Química o Ciencias Ambientales.`;
+        break;
+    }
+
+    document.getElementById('resultadoTest').innerHTML = `
+      <div class="info-box">
+        <i class="fas fa-lightbulb"></i>
+        <p>${mensaje}</p>
+      </div>
+    `;
   }
 </script>
 
